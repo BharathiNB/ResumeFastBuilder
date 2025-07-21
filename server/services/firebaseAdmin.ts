@@ -3,7 +3,7 @@ import admin from "firebase-admin";
 let isInitialized = false;
 
 // Initialize Firebase Admin SDK
-if (!admin.apps.length ) {
+if (!admin.apps.length) {
   try {
     admin.initializeApp({
       credential: admin.credential.cert({
@@ -23,7 +23,7 @@ if (!admin.apps.length ) {
           "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40resumefast-b7163.iam.gserviceaccount.com",
         universe_domain: "googleapis.com",
       }),
-      projectId: 'resumefast-b7163',
+      projectId: "resumefast-b7163",
     });
     isInitialized = true;
     console.log("Firebase Admin initialized successfully");
